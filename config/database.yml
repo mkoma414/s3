@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: s3-test_production
-  username: s3-test
-  password: <%= ENV['S3-TEST_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
