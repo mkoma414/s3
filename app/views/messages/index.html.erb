@@ -13,7 +13,6 @@
 
   <tbody>
     <% @messages.each do |message| %>
-    <%binding.pry%>
       <tr>
         <td><%= message.text %></td>
         <td><%= image_tag message.image.url %></td> %>
