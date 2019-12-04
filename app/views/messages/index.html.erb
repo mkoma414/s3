@@ -13,9 +13,10 @@
 
   <tbody>
     <% @messages.each do |message| %>
+    <%binding.pry%>
       <tr>
         <td><%= message.text %></td>
-        <td><%= message.image %></td>
+        <td><%= image_tag message.image.url %></td> %>
         <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
